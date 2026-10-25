@@ -20,7 +20,9 @@
 <body>
 <!-- עוטף את אפליקציית Apps Script, כדי שתיפתח גם כשהדפדפן מחובר לחשבון גוגל.
      אין כאן שום מידע אישי: הגישה לכל מסך דורשת מפתח אישי שנשלח רק בוואטסאפ. -->
-<iframe id="app" title="בוקר-מוש" referrerpolicy="no-referrer"></iframe>
+<!-- credentialless: גוגל לא מקבל את חשבון הגוגל של המכשיר (למשל חשבון ילדים ב-Family Link, שחסום ל-Apps Script),
+     והאפליקציה נטענת כמו לאורח. -->
+<iframe id="app" title="בוקר-מוש" referrerpolicy="no-referrer" credentialless></iframe>
 <script>
   var APP_URL = 'https://script.google.com/macros/s/AKfycby7YXgNEtZlj9dl_06GPvcMEEZflRm-yjoAvlvI97k8T-OGLk_r9dEiQjwKAQkAk4vC6g/exec';
   document.getElementById('app').src = APP_URL + location.search;
